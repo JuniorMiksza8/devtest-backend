@@ -4,7 +4,7 @@
   "main": "server.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=test nodemon src/server.js  --ignore __tests__",
-    "start": "cross-env NODE_ENV=production node src/server.js",
+    "start": "cross-env NODE_ENV=production  node src/server.js",
     "test": "SET NODE_ENV=test & jest"
   },
   "license": "MIT",

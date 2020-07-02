@@ -4,7 +4,7 @@ var url;
 if(process.env.NODE_ENV  == 'test ' || 'test'){
   url = 'mongodb://127.0.0.1:27017/testdev?readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=false';
 }else{
-  url = 'mongodb+srv://admin:j981174941@cluster0.czon8.mongodb.net/testdev?retryWrites=true&w=majority';
+  url = process.env.DB_MAIN;
 }
 
 console.log(url);
