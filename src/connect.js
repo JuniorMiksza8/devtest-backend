@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
 var url;
 
-if(process.env.NODE_ENV  == 'test ' || 'test'){
+if(process.env.NODE_ENV  == 'test '){
   url = 'mongodb://127.0.0.1:27017/testdev?readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=false';
-}else{
+}
+if(process.env.NODE_ENV === 'production '){
   url = process.env.DB_MAIN;
 }
 
