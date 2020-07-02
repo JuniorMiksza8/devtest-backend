@@ -1,6 +1,3 @@
-require('dotenv').config({
-    path : './src/.env'
-})
 const logger = require('./services/log.service');
 const routes = require('./routes');
 const express = require("express");
