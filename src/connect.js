@@ -5,14 +5,9 @@ var url;
 if(process.env.NODE_ENV  == 'test '){
   url = 'mongodb://127.0.0.1:27017/testdev?readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=false';
 }
-if(process.env.NODE_ENV === 'production '){
-  url = process.env.DB_MAIN;
-}
-
-console.log(url);
 
 try {
-  mongoose.connect(url, {
+  mongoose.connect(process.env.DB_MAIN, {
     useNewUrlParser: true,
     useUnifiedTopology: process.env.NODE_ENV === 'test ' ? false : true ,
   }); 
