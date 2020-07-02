@@ -2,12 +2,12 @@ const mongoose = require('mongoose');
 var url;
 
 if(process.env.NODE_ENV  == 'test ' || 'test'){
-  url = process.env.DB_TEST;
+  url = 'mongodb://127.0.0.1:27017/testdev?readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=false';
 }else{
-  url = process.env.DB_MAIN;
+  url = 'mongodb+srv://admin:j981174941@cluster0.czon8.mongodb.net/testdev?retryWrites=true&w=majority';
 }
 
-
+console.log(url);
 
 try {
   mongoose.connect(url, {
