@@ -34,12 +34,10 @@ const ProductSchema = new mongoose.Schema({
     },
     category : {
         type : schema.Types.String,
-        required : true,
         ref : 'Category'    
     },
     brand : {
         type : schema.Types.String,
-        required : true,
         ref : 'Brand'
     },
 
